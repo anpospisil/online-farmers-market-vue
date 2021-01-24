@@ -27,8 +27,16 @@ export const store = new Vuex.Store({
 ],
   },
   mutations: {
-    
+        addProduct (state, product) {
+         // mutate state
+         state.products = [...state.products, product]
+       }
   },
+  actions: {
+    async submitForm({ commit }, product) {
+      commit("addProduct", product);
+    }
+},
   getters: {
       getProducts: state => {
           return state.products
