@@ -4,7 +4,7 @@
     <img class="product-image" :src="product.image" />
     <p class="product-name">{{product.name}}</p>
     <p class="product-price">$ {{product.price}}</p>
-    <button class="add-to-cart">Add to cart</button>
+    <button class="add-to-cart" v-on:click="addOnClick(product.id)">Add to cart</button>
   </div>
   </div>
 </template>
@@ -14,6 +14,11 @@ export default {
   name: 'ProductCard',
   props: {
     products: Array
+  },
+  methods: {
+    addOnClick: function(id){
+      this.$store.dispatch("addOnClick", id)
+    }
   }
 }
 </script>
