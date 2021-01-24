@@ -1,6 +1,7 @@
 <template>
   <div class="products">
     <ProductCard :products="products"/>
+    <p>{{products}}</p>
   </div>
 </template>
 
