@@ -36,26 +36,38 @@ export const store = new Vuex.Store({
       // mutate state
       state.products = [...state.products, product];
     },
+    editProduct(state, productEdit) {
+      state.products = [
+        ...state.products.filter(product => product.id !== productEdit.id),
+        productEdit
+     ]
+    },
     addToCart(state, id) {
-        state.cart = [...state.cart, id]
-    }
+      state.cart = [...state.cart, id];
+    },
   },
   actions: {
     //   adds new product to products state
     async submitForm({ commit }, product) {
       commit("addProduct", product);
     },
+    //   edits existing product in products state
+    async submitEdit({ commit }, productEdit) {
+      commit("editProduct", productEdit);
+    },
     // adds product id to cart state
     async addOnClick({ commit }, id) {
-        commit("addToCart", id);
-    }
+      commit("addToCart", id);
+    },
   },
   getters: {
     getProducts: (state) => {
       return state.products;
     },
+    getProduct: (state) => id => state.products.find((product) => product.id === id),
+
     getCartItems: (state) => {
-        return state.cart
-    }
-  }
+      return state.cart;
+    },
+  },
 });

@@ -5,6 +5,7 @@
     <p class="product-name">{{product.name}}</p>
     <p class="product-price">$ {{product.price}}</p>
     <button class="add-to-cart" v-on:click="addOnClick(product.id)">Add to cart</button>
+    <button class="edit-product" v-on:click="editOnClick(product.id)">Edit product</button>
   </div>
   </div>
 </template>
@@ -18,13 +19,16 @@ export default {
   methods: {
     addOnClick: function(id){
       this.$store.dispatch("addOnClick", id)
-    }
+    },
+    editOnClick: function(id){
+    this.$router.push(`/product/${id}`)
   }
+  },
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<!-- Add "scoped" tribute to limit CSS to this component only -->
+<style>
     .product-card{
       border: 1px solid grey;
       width: 500px;
