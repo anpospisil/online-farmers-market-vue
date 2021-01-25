@@ -3,8 +3,7 @@
     <form
       id="new-product"
       @submit="submitForm"
-      action="https://vuejs.org/"
-      method="post"
+      action=""
     >
 
      <p v-if="errors.length">
@@ -55,7 +54,7 @@ export default {
       errors: [],
     };
   },
-  products: function(){
+  mounted(){
     return this.products = this.$store.getters.getProducts
   },
 
@@ -71,7 +70,7 @@ export default {
       if (this.name && this.price && this.image) {
           this.$store.dispatch("submitForm", product)
         this.$router.push("/")
-      } else
+      } else {
 
       if (!this.name) {
         this.errors.push("Add a product name");
@@ -84,7 +83,7 @@ export default {
       }
 
       e.preventDefault();
-    
+      }
   },
   },
 };
