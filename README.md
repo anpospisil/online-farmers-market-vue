@@ -4,7 +4,7 @@
 
 ## About the app
 
-This is a display-level e-shop for fruits & veggies made with Vue and Vuex. Users can add products to a cart, create new products and edit exisiting products.
+This is a display-level e-shop for fruits & veggies made with Vue and Vuex. Users can add products to a cart, create new products and edit exisiting products. Product cards and navbar are responsive.
 
 ## Demo
 
