@@ -26,7 +26,7 @@ My goal for this project was to created a light, user-friendly e-shop using Vuej
 
 ## Project board
 
-Checkout User stories and Tickets [HERE](https://github.com/anpospisil/online-farmers-market-vue/projects/1)
+Checkout User stories and Todos [HERE](https://github.com/anpospisil/online-farmers-market-vue/projects/1)
 
 ## Git workflow
 
@@ -36,7 +36,7 @@ In this project I try to:
 - Name branches according to feature
 - Commit frequently
 
-See 👀 commit history [HERE](https://github.com/anpospisil/online-farmers-market-vue/pulls?q=is%3Apr+is%3Aclosed)
+See commit history [HERE](https://github.com/anpospisil/online-farmers-market-vue/pulls?q=is%3Apr+is%3Aclosed) 👀
 
 ## How to install the app
 
