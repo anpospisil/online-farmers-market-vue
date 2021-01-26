@@ -1,7 +1,6 @@
 <template>
-  <div class="products">
+  <div class="products h-4/6 ">
     <ProductCard :products="products"/>
-    <p>{{products}}</p>
   </div>
 </template>
 

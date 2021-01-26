@@ -1,11 +1,13 @@
 <template>
-  <div>
-  <div class="product-card" v-for="product in products" :key="product.id">
-    <img class="product-image" :src="product.image" />
-    <p class="product-name">{{product.name}}</p>
+  <div class="flex flex-wrap flex-row justify-center mt-10">
+  <div class="w-80 m-5 p-1 bg-gradient-to-b from-green-400 via-green-200 rounded-3xl shadow-md hover:shadow-xl" v-for="product in products" :key="product.id">
+    <div class="rounded-xl"><img class="mx-auto p-8 rounded-xl" :src="product.image" /></div>
+    <p class="product-name uppercase font-bold">{{product.name}}</p>
     <p class="product-price">$ {{product.price}}</p>
-    <button class="add-to-cart" v-on:click="addOnClick(product.id)">Add to cart</button>
-    <button class="edit-product" v-on:click="editOnClick(product.id)">Edit product</button>
+    <div class="mt-5">
+    <button class="add-to-cart p-2 m-2 bg-yellow-500 border-2 border-yellow-500 text-gray-800 rounded-md shadow-md" v-on:click="addOnClick(product.id)">Add to cart</button>
+    <button class="edit-product py-2 px-3 m-2 bg-transparent border-2 border-purple-500 text-purple-500 rounded-md shadow-md" v-on:click="editOnClick(product.id)">Edit</button>
+    </div>
   </div>
   </div>
 </template>
@@ -29,14 +31,4 @@ export default {
 
 <!-- Add "scoped" tribute to limit CSS to this component only -->
 <style>
-    .product-card{
-      border: 1px solid grey;
-      width: 500px;
-      height: auto;
-    }
-    .product-image{
-      width: 100px;
-      height: 100px;
-      border: 1px solid grey;
-    }
 </style>
