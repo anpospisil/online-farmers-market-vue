@@ -106,7 +106,7 @@ export default {
 
       e.preventDefault();
       }
-  },
+  }
   },
 };
 </script>

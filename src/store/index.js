@@ -66,6 +66,9 @@ export const store = new Vuex.Store({
     addToCart(state, id) {
       state.cart = [...state.cart, id];
     },
+    emptyCart(state, cart)  {
+      state.cart = cart
+    }
   },
   actions: {
     //   adds new product to products state
@@ -79,6 +82,9 @@ export const store = new Vuex.Store({
     // adds product id to cart state
     async addOnClick({ commit }, id) {
       commit("addToCart", id);
+    },
+    async emptyCart({ commit }, cart) {
+      commit("emptyCart", cart);
     },
   },
   getters: {

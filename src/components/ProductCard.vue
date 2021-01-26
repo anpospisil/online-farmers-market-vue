@@ -5,7 +5,7 @@
     <p class="product-name uppercase font-bold tracking-wide">{{product.name}}</p>
     <p class="product-price">$ {{product.price}}</p>
     <div class="mt-5">
-    <button class="add-to-cart p-2 m-2 mb-4 bg-yellow-400 border-2 border-yellow-500 text-gray-800 rounded-md shadow-md hover:bg-yellow-500" v-on:click="addOnClick(product.id)">Add to cart</button>
+    <button class="add-to-cart p-2 m-2 mb-4 bg-yellow-400 border-2 border-yellow-400 text-gray-800 rounded-md shadow-md hover:bg-yellow-500 hover:border-yellow-500" v-on:click="addOnClick(product.id)">Add to cart</button>
     <button class="edit-product py-2 px-3 m-2 bg-transparent border-2 border-purple-500 text-purple-500 rounded-md shadow-md" v-on:click="editOnClick(product.id)">Edit</button>
     </div>
   </div>
