@@ -59,16 +59,16 @@ export const store = new Vuex.Store({
     },
     editProduct(state, productEdit) {
       state.products = [
-        ...state.products.filter(product => product.id !== productEdit.id),
-        productEdit
-     ]
+        ...state.products.filter((product) => product.id !== productEdit.id),
+        productEdit,
+      ];
     },
     addToCart(state, id) {
       state.cart = [...state.cart, id];
     },
-    emptyCart(state, cart)  {
-      state.cart = cart
-    }
+    emptyCart(state, cart) {
+      state.cart = cart;
+    },
   },
   actions: {
     //   adds new product to products state
@@ -83,28 +83,32 @@ export const store = new Vuex.Store({
     async addOnClick({ commit }, id) {
       commit("addToCart", id);
     },
+    // empties cart state
     async emptyCart({ commit }, cart) {
       commit("emptyCart", cart);
     },
   },
   getters: {
+    // get all products
     getProducts: (state) => {
       return state.products;
     },
-    getProduct: (state) => id => state.products.find((product) => product.id === id),
-
-    getProductsInCart: state => {
-      return state.cart.map(( id ) => {
-        const product = state.products.find(p => p.id === id)
+    // gets one product by id
+    getProduct: (state) => (id) =>
+      state.products.find((product) => product.id === id),
+    // gets all products added to cart state
+    getProductsInCart: (state) => {
+      return state.cart.map((id) => {
+        const product = state.products.find((p) => p.id === id);
         return {
           name: product.name,
           price: product.price,
-        }
-      })
+        };
+      });
     },
-  
+    // gets total ammount of items in cart state
     getNumberOfCartItems: (state) => {
-      return state.cart.length
+      return state.cart.length;
     },
   },
 });

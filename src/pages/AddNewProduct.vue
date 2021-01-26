@@ -1,11 +1,13 @@
 <template>
   <div class="add-new-product my-10 flex justify-evenly w-full">
+   <!-- Form starts-->
     <form
       class="w-80 mx-5 border-2 bg-gradient-to-b from-purple-400 via-purple-200 shadow-md rounded-3xl"
       id="new-product"
       @submit="submitForm"
       action=""
     >
+    <!-- Error messages -->
       <div class="mt-4 inline-block px-16 py-4 rounded-3xl text-red-500">
       <p v-if="errors.length" class="">
       <b>(｡•́︿•̀｡) Please:</b>
@@ -42,8 +44,9 @@
         >
       </div>
     </form>
+    <!-- Form ends -->
     <div class="text-9xl text-purple-400 mt-44">=</div>
-    <!-- preview -->
+    <!-- preview product card-->
     <div class="w-80 mx-5 p-1 bg-gradient-to-b from-green-400 via-green-200 rounded-3xl shadow-md hover:shadow-xl">
     <div class="rounded-xl"><img class="mx-auto p-8 rounded-xl" :src="image" /></div>
     <p class="product-name uppercase font-bold">{{name}}</p>
