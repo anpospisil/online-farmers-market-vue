@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import Products from "../pages/Products.vue";
 import EditProduct from "../pages/EditProduct.vue";
 import AddNewProduct from "../pages/AddNewProduct.vue";
-import Cart from "../pages/Cart"
+import Cart from "../pages/Cart";
 
 Vue.use(VueRouter);
 
@@ -17,7 +17,7 @@ export const router = new VueRouter({
     {
       path: "/product/:id",
       name: "EditProduct",
-      component: EditProduct
+      component: EditProduct,
     },
     {
       path: "/add-new-product",
@@ -25,10 +25,10 @@ export const router = new VueRouter({
       component: AddNewProduct,
     },
     {
-        path: "/cart",
-        name: "Cart",
-        component: Cart,
-      },
+      path: "/cart",
+      name: "Cart",
+      component: Cart,
+    },
   ],
-  mode: "history"
+  mode: "history",
 });

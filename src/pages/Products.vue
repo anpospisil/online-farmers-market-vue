@@ -1,32 +1,27 @@
 <template>
   <div class="products h-4/6 ">
-    <ProductCard :products="products"/>
+    <ProductCard :products="products" />
   </div>
 </template>
 
 <script>
-import ProductCard from '../components/ProductCard.vue'
+import ProductCard from "../components/ProductCard.vue";
 
 export default {
-  name: 'Products',
+  name: "Products",
   components: {
-    ProductCard
+    ProductCard,
   },
-  props: {
-
-  },
+  props: {},
   data() {
     return {
-      products: []
-    }
+      products: [],
+    };
   },
   mounted() {
-    this.products = this.$store.getters.getProducts
-  }
-}
+    this.products = this.$store.getters.getProducts;
+  },
+};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-    
-</style>
+<style scoped></style>
