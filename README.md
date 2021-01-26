@@ -1,6 +1,6 @@
 # The Online Farmer :carrot:
 
- View deployed version :point_right: [HERE]()! :point_left:
+ View deployed version :point_right: [HERE](https://online-farmers-market-vue.netlify.app/)! :point_left:
 
 ## About the app
 
