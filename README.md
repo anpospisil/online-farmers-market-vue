@@ -1,6 +1,6 @@
 # The Online Farmers Market
 
- Deployed version is :point_right: [HERE]()! :point_left:
+ View deployed version :point_right: [HERE]()! :point_left:
 
 ## About the app
 
