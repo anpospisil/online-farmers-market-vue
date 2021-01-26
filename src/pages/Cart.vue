@@ -6,7 +6,7 @@
     </div>
     <div class="flex flex-col justify-end p-4 border-t-2 border-gray-500">
       <div class="ml-10 h-16 border-2 border-gray-500">VAT</div>
-      <div class="ml-10 h-16 border-2 border-gray-500">Total</div>
+      <div class="ml-10 h-16 border-2 border-gray-500">Total {{subtotal()}}</div>
     </div>
   </div>
 </template>
@@ -20,6 +20,9 @@ export default {
 
   },
   methods:{
+    subtotal: function(){
+     return this.cartItems.reduce((a, {price}) => a + price, 0)
+      }
   },
   data() {
     return {
