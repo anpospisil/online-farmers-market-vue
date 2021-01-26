@@ -87,8 +87,11 @@ export const store = new Vuex.Store({
     },
     getProduct: (state) => id => state.products.find((product) => product.id === id),
 
-    getCartItems: (state) => {
-      return state.cart;
+    getCartItemIds: (state) => {
+      return state.cart
+    },
+    getNumberOfCartItems: (state) => {
+      return state.cart.length
     },
   },
 });

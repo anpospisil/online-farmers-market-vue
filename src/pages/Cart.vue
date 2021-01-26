@@ -1,6 +1,9 @@
 <template>
   <div class="cart">
-    <p></p>
+    <div>
+     <div>{{cart}}</div>
+     <div>{{products}}</div>
+    </div>
   </div>
 </template>
 
@@ -12,13 +15,17 @@ export default {
   props: {
 
   },
+  methods:{
+    
+  },
   data() {
     return {
-      cart: []
+      cart: [],
     }
   },
   mounted() {
     this.products = this.$store.getters.getProducts
+    this.cart = this.$store.getters.getCartItemIds
   }
 }
 </script>
