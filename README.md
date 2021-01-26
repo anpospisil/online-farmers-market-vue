@@ -8,11 +8,15 @@ This is a display-level e-shop for fruits & veggies made with Vue and Vuex. User
 
 ## Demo
 
-### The app
-<img src="" width="75%" />
+### Add New Product
+<img src="https://media.giphy.com/media/mm0Jcm3WLsrHIPzthG/giphy.gif" width="75%" />
 
-### Add Product
-<img src="" width="75%" />
+### Add Product to Cart
+<img src="https://media.giphy.com/media/ImfzYxg7eb6lnQ1YGL/giphy.gif" width="75%" />
+
+### Cart
+<img src="https://media.giphy.com/media/5xvjiVbv50522a0HBz/giphy.gif" width="75%" />
+
 
 ## Goal
 My goal for this project was to created a light, user-friendly e-shop using Vuejs, Vuex and Tailwind CSS. 
