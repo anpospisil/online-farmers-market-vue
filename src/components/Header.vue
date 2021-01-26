@@ -1,8 +1,8 @@
 <template>
-  <div class="header mx-auto h-48 bg-green-400">
+  <div class="header mx-auto pt-2 h-48 bg-green-400">
     <!-- Stand in for vue-router-->
     <img class="w-36 mx-auto" src="../assets/carrot.svg" />
-    <div class="company text-4xl text-gray-800 font-bold">The Online Farmer</div>
+    <div class="company text-4xl text-gray-800 font-bold tracking-wide">The Online Farmer</div>
   </div>
 </template>
 
