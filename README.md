@@ -19,7 +19,7 @@ This is a display-level e-shop for fruits & veggies made with Vue and Vuex. User
 
 
 ## Goal
-My goal for this project was to use my React and Bootstrap knowledge to learn and implement a light, user-friendly e-shop using Vuejs, Vuex and Tailwind CSS. 
+My goal for this project was to use my React knowledge to learn and implement Vuejs, Vuex and Tailwind CSS to create a light, user-friendly e-shop.
 
 ## Technologies
 
