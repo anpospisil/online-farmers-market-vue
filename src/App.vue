@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="border-2 border-red-200">
+  <div id="app" class="">
     <Header />
     <Navbar />
     <router-view />

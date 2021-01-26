@@ -8,24 +8,24 @@ export const store = new Vuex.Store({
     products: [
       {
         id: 1,
-        name: "gala apple",
-        price: 1.99,
+        name: "onion",
+        price: 0.99,
         image:
-          "https://cdn.shopify.com/s/files/1/0781/7159/products/PPAPP110_large_c2b2aa57-3647-4890-aff9-7d607d7b975b_large.jpg?v=1548974601",
+          "https://cdn.shopify.com/s/files/1/0781/7159/products/PPONI110_large_a653b546-8006-4f16-a10b-5ca1bba34f54_large.jpg?v=1548982762",
       },
       {
         id: 2,
-        name: "bosc pear",
-        price: 1.29,
+        name: "celery",
+        price: 3.49,
         image:
-          "https://cdn.shopify.com/s/files/1/0781/7159/products/bosc_large.jpg?v=1548974334",
+          "https://cdn.shopify.com/s/files/1/0781/7159/products/HILPPCEL101_large_4ebb4dfd-5773-4f6f-943a-2f29a4d99cb7_large.jpg?v=1548981875",
       },
       {
         id: 3,
-        name: "black plum",
-        price: 0.99,
+        name: "carrots",
+        price: 2.99,
         image:
-          "https://cdn.shopify.com/s/files/1/0781/7159/products/plum_887c9a6f-f6d5-4f54-a8cc-5c296fa80b50_large.jpg?v=1548976331",
+          "https://cdn.shopify.com/s/files/1/0781/7159/products/carrots_grande_ded5370d-1d2d-4bf6-987b-bdaab5b03616_large.jpg?v=1548979655",
       },
       {
         id: 4,
@@ -87,9 +87,16 @@ export const store = new Vuex.Store({
     },
     getProduct: (state) => id => state.products.find((product) => product.id === id),
 
-    getCartItemIds: (state) => {
-      return state.cart
+    getProductsInCart: state => {
+      return state.cart.map(( id ) => {
+        const product = state.products.find(p => p.id === id)
+        return {
+          name: product.name,
+          price: product.price,
+        }
+      })
     },
+  
     getNumberOfCartItems: (state) => {
       return state.cart.length
     },
